@@ -4,7 +4,7 @@ setup(
     name='crf-helper',
 
     version='0.1',
-    packages=['crf_helper', 'data_utils'],
+    packages=['crf_helper', 'data_utils', 'trie'],
 
     # The project's main homepage.
     url='https://github.com/yydai/crf-helper',
