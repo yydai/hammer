@@ -4,7 +4,7 @@ setup(
     name='crf-helper',
 
     version='0.1',
-    packages=['crf_helper', 'data_utils', 'trie'],
+    packages=['crf_helper', 'data_utils', 'trie', 'term_weight'],
 
     # The project's main homepage.
     url='https://github.com/yydai/crf-helper',
@@ -18,6 +18,7 @@ setup(
     keywords=['crf', 'data'],
     install_requires=[
         'requests>=1.0',
-        'numpy'
+        'numpy',
+        'jieba>=0.42.1'
     ]
 )
