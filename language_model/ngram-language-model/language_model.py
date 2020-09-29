@@ -13,10 +13,10 @@ def load_data(data_dir):
     """Load train and test corpora from a directory.
 
     Directory must contain two files: train.txt and test.txt.
-    Newlines will be stripped out.
+    Newlines will be stripped out. 
 
     Args:
-        data_dir (Path) -- pathlib.Path of the directory to use.
+        data_dir (Path) -- pathlib.Path of the directory to use. 
 
     Returns:
         The train and test sets, as lists of sentences.
@@ -34,7 +34,6 @@ def load_data(data_dir):
 
 class LanguageModel(object):
     """An n-gram language model trained on a given corpus.
-
     For a given n and given training corpus, constructs an n-gram language
     model for the corpus by:
     1. preprocessing the corpus (adding SOS/EOS/UNK tokens)
@@ -60,12 +59,11 @@ class LanguageModel(object):
 
     def _smooth(self):
         """Apply Laplace smoothing to n-gram frequency distribution.
-
         Here, n_grams refers to the n-grams of the tokens in the training corpus,
         while m_grams refers to the first (n-1) tokens of each n-gram.
 
         Returns:
-            dict: Mapping of each n-gram (tuple of str) to its Laplace-smoothed
+            dict: Mapping of each n-gram (tuple of str) to its Laplace-smoothed 
             probability (float).
 
         """
@@ -86,7 +84,6 @@ class LanguageModel(object):
 
     def _create_model(self):
         """Create a probability distribution for the vocabulary of the training corpus.
-
         If building a unigram model, the probabilities are simple relative frequencies
         of each token with the entire corpus.
 
@@ -127,12 +124,10 @@ class LanguageModel(object):
 
     def perplexity(self, test_data):
         """Calculate the perplexity of the model against a given test corpus.
-
         Args:
             test_data (list of str): sentences comprising the training corpus.
         Returns:
             The perplexity of the model as a float.
-
         """
         test_tokens = preprocess(test_data, self.n)
         test_ngrams = nltk.ngrams(test_tokens, self.n)
@@ -166,7 +161,6 @@ class LanguageModel(object):
             return ("</s>", 1)
         else:
             return candidates[0 if prev != () and prev[-1] != "<s>" else i]
-
     def generate_sentences(self, num, min_len=12, max_len=24):
         """Generate num random sentences using the language model.
 
@@ -191,12 +185,10 @@ class LanguageModel(object):
                 next_token, next_prob = self._best_candidate(prev, i, without=blacklist)
                 sent.append(next_token)
                 prob *= next_prob
-
                 if len(sent) >= max_len:
                     sent.append("</s>")
 
             yield ' '.join(sent), -1/math.log(prob)
-
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser("N-gram Language Model")
