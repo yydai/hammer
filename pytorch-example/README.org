@@ -1,0 +1,2 @@
+Colab 提供了免费的Tesla T4 GPU, 16G显存
+
