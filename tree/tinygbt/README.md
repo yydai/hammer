@@ -1,4 +1,6 @@
-# TinyGBT
+# TinyGBT 
+
+from https://github.com/lancifollia/tinygbt
 
 TinyGBT(Tiny Gradient Boosted Trees) is a 200 line gradient boosted trees implementation written in pure python.
 
