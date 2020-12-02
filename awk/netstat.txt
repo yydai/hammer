@@ -1,0 +1,20 @@
+激活Internet连接 (w/o 服务器)
+Proto Recv-Q Send-Q Local Address           Foreign Address         State      
+tcp        0      0 localhost:47656         localhost:54530         TIME_WAIT  
+tcp        0      0 localhost:47748         localhost:54530         TIME_WAIT  
+tcp        0      0 localhost:47644         localhost:54530         TIME_WAIT  
+tcp        0      0 localhost:57230         localhost:49549         TIME_WAIT  
+tcp        0      0 localhost:47776         localhost:54530         TIME_WAIT  
+tcp        0      0 localhost:39512         localhost:52189         TIME_WAIT  
+tcp        0      0 localhost:47728         localhost:54530         TIME_WAIT  
+tcp        0      0 localhost:36204         localhost:49429         TIME_WAIT  
+tcp        0      0 localhost:33870         localhost:36451         TIME_WAIT  
+tcp        0      0 localhost:47160         localhost:48695         TIME_WAIT  
+tcp        0      0 localhost:47724         localhost:54530         TIME_WAIT  
+tcp        0      0 i-bdb11.dba.cn1.q:55018 223.166.152.108:https   ESTABLISHED
+tcp        0      0 localhost:51802         localhost:40425         ESTABLISHED
+tcp        0      0 localhost:47632         localhost:54530         TIME_WAIT  
+tcp        0      0 localhost:47708         localhost:54530         TIME_WAIT  
+tcp        0      0 localhost:47768         localhost:54530         TIME_WAIT  
+tcp        0      0 localhost:47925         localhost:33486         ESTABLISHED
+tcp        0      0 localhost:47756         localhost:54530         TIME_WAIT  
